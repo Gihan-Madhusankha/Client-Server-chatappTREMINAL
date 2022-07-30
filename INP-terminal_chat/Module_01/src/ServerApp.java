@@ -1,4 +1,6 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -22,6 +24,8 @@ public class ServerApp {
             System.out.println(localSocket.getLocalAddress());
             System.out.println(localSocket.getInetAddress());
 
+            InputStreamReader inputStreamReader = new InputStreamReader(localSocket.getInputStream());
+            
 
 
         } catch (IOException e) {
