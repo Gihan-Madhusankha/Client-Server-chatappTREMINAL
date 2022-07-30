@@ -15,6 +15,8 @@ public class ClientApp {
             Socket socket = new Socket("localhost", PORT);
 
             PrintWriter printWriter = new PrintWriter(socket.getOutputStream());
+            printWriter.println("Hello there, how are you...");
+            printWriter.flush();
 
         } catch (IOException e) {
             e.printStackTrace();
