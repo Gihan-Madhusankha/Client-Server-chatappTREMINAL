@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.net.ServerSocket;
+import java.net.Socket;
 
 /**
  * @author : Gihan Madhusankha
@@ -11,7 +12,16 @@ public class ServerApp {
 
         final int PORT = 8000;
         try {
-            ServerSocket serverSocket = new ServerSocket();
+            ServerSocket serverSocket = new ServerSocket(PORT);
+            System.out.println("Server is running in port : "+PORT);
+
+            Socket localSocket = serverSocket.accept();
+            System.out.println(localSocket.getPort());
+            System.out.println(localSocket.getLocalPort());
+            System.out.println(localSocket.getLocalAddress());
+            System.out.println(localSocket.getInetAddress());
+
+
 
         } catch (IOException e) {
             e.printStackTrace();
