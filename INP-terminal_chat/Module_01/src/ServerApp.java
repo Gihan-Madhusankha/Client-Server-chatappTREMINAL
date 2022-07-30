@@ -25,7 +25,8 @@ public class ServerApp {
             System.out.println(localSocket.getInetAddress());
 
             InputStreamReader inputStreamReader = new InputStreamReader(localSocket.getInputStream());
-            
+
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
 
         } catch (IOException e) {
