@@ -35,6 +35,9 @@ public class ServerApp {
                 dataOutputStream.flush();
             }
 
+            dataInputStream.close();
+            dataOutputStream.close();
+            bufferedReader.close();
 
         } catch (IOException e) {
             e.printStackTrace();
