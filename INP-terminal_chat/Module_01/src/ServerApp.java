@@ -16,6 +16,7 @@ public class ServerApp {
             System.out.println("Server is running in port : "+PORT);
 
             Socket localSocket = serverSocket.accept();
+            System.out.println("server accepted...");
             System.out.println(localSocket.getPort());
             System.out.println(localSocket.getLocalPort());
             System.out.println(localSocket.getLocalAddress());
