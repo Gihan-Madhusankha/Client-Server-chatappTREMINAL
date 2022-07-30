@@ -1,3 +1,5 @@
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 
@@ -12,6 +14,9 @@ public class ClientApp {
         final int PORT = 8000;
         try {
             Socket socket = new Socket("localhost", PORT);
+
+            DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
+            DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
 
 
         } catch (IOException e) {
