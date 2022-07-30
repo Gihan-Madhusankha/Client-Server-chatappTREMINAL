@@ -25,6 +25,13 @@ public class ServerApp {
 
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
+            String message = "", reply = "";
+
+            while (!message.equals("finish")) {
+                message = dataInputStream.readUTF();
+                System.out.println(message);
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
