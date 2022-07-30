@@ -30,7 +30,11 @@ public class ServerApp {
             while (!message.equals("finish")) {
                 message = dataInputStream.readUTF();
                 System.out.println(message);
+                reply = bufferedReader.readLine();
+                dataOutputStream.writeUTF(reply);
+                dataOutputStream.flush();
             }
+
 
         } catch (IOException e) {
             e.printStackTrace();
